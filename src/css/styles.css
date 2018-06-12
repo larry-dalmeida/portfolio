@@ -3,11 +3,9 @@
 ========================================================================== */
 
 :root {
-  --color-bg: #0d0d0d;
+  --color-bg: #0f0f0f;
   --color-text: #fff;
-  --color-link-gradient-start: #1976d2;
-  --color-link-gradient-end: #2962ff;
-  --font-family-1: 'Roboto', sans-serif;
+  --font-family-1: 'Cabin', sans-serif;
   --spacing-1: 50px;
 }
 
@@ -64,46 +62,59 @@ img {
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-size: 40px;
+  font-size: 20px;
   font-family: var(--font-family-1);
   line-height: 1.5;
 }
 
-@media (min-width: 600px) {
-  body {
-    font-size: 60px;
-  }
-}
-
-@media (min-width: 767px) {
-  body {
-    font-size: 75px;
-  }
-}
-
-h1,
-p {
-  margin-bottom: var(--spacing-1);
-}
-
 a {
-  background-image: linear-gradient(
-    120deg,
-    var(--color-link-gradient-start) 0%,
-    var(--color-link-gradient-end) 100%
-  );
-  background-repeat: no-repeat;
-  background-size: 100% 0.2em;
-  background-position: 0 88%;
+  --color-text-hovered: #000;
   color: var(--color-text);
+  font-weight: 700;
+  display: inline-block;
+  margin: 0 3px;
+  position: relative;
   outline: none;
   text-decoration: none;
-  transition: background-size 0.25s ease-in;
+  transition: all 0.4s cubic-bezier(0.15, 0.9, 0.34, 0.95);
+}
+
+a::after,
+a::before {
+  display: block;
+  background-color: var(--color-text);
+  position: absolute;
+  content: '';
+}
+
+a::before {
+  top: 0;
+  left: -5%;
+  height: 100%;
+  width: 110%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: -1;
+}
+
+a::after {
+  bottom: 2px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.15, 0.9, 0.34, 0.95);
 }
 
 a:hover,
 a:focus {
-  background-size: 100% 88%;
+  color: var(--color-text-hovered);
+  transition: all 0.4s cubic-bezier(0.15, 0.9, 0.34, 0.95) 0.2s;
+}
+
+a:hover::before,
+a:focus::before {
+  transform: scaleX(1);
 }
 
 /* =======================================================================
@@ -111,47 +122,27 @@ a:focus {
 ========================================================================== */
 
 .container {
-  padding: 40px 0;
+  padding: 50px 0;
   max-width: 84%;
   margin: 0 auto;
 }
 
 @media (min-width: 767px) {
   .container {
-    padding: 100px 0;
+    padding: 70px 0;
     max-width: 80%;
   }
-}
-
-.links-group {
-  margin-bottom: var(--spacing-1);
 }
 
 /* =======================================================================
    Components
 ========================================================================== */
 
-a[href*='stage'] {
-  --color-link-gradient-start: #ff1744;
-  --color-link-gradient-end: #ee2e24;
+.links-group {
+  margin: var(--spacing-1) 0;
 }
 
-a[href*='yankee'] {
-  --color-link-gradient-start: #00838f;
-  --color-link-gradient-end: #1b5e20;
-}
-
-a[href*='zalando'] {
-  --color-link-gradient-start: #ff6900;
-  --color-link-gradient-end: #e65100;
-}
-
-a[href*='amplifi'] {
-  --color-link-gradient-start: #0288d1;
-  --color-link-gradient-end: #01579b;
-}
-
-a[href*='github'] {
-  --color-link-gradient-start: #757575;
-  --color-link-gradient-end: #424242;
+.logo {
+  font-weight: 700;
+  margin-bottom: var(--spacing-1);
 }
