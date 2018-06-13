@@ -1,3 +1,9 @@
 node_modules
-dist
+
+dist/*.ico
+dist/*.html
+dist/*.css
+dist/*.js
+dist/*.map
+
 .cache
