@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 class Home extends Component {
   render() {
     return (
-      <article className="container">
+      <Fragment>
         <header>
           <p className="logo">Larry D'Almeida</p>
           <h1>
@@ -82,7 +82,7 @@ class Home extends Component {
             <a href="mailto:hello@larrydalmeida.com">email</a>.
           </address>
         </footer>
-      </article>
+      </Fragment>
     );
   }
 }
