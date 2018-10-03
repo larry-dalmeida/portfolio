@@ -1,0 +1,17 @@
+[
+  {
+    "id": "app.portfolio.headline",
+    "defaultMessage": "I am a software engineer specializing in building maintainable and high performance e-commerce applications.",
+    "filepath": "src/messages.js"
+  },
+  {
+    "id": "app.portfolio.content1",
+    "defaultMessage": "To get started, edit",
+    "filepath": "src/messages.js"
+  },
+  {
+    "id": "app.portfolio.content2",
+    "defaultMessage": "and save to reload.",
+    "filepath": "src/messages.js"
+  }
+]

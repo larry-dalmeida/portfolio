@@ -1,21 +1,21 @@
 import React, { Component, Fragment } from "react";
+import { injectIntl } from "react-intl";
+
+import messages from "./messages";
 
 class Home extends Component {
   render() {
+    const {
+      intl: { formatMessage }
+    } = this.props;
     return (
       <Fragment>
-        <header>
-          <p className="logo">Larry D'Almeida</p>
-          <h1>
-            I am a software engineer specializing in building maintainable and
-            high performance e-commerce applications.
-          </h1>
-        </header>
-
         <main>
+          <h1>{formatMessage(messages.title)}</h1>
           <p>
             These days, I disrupt the online retail space with
             <a
+              className="link"
               href="http://zalando.de"
               target="_blank"
               rel="noopener noreferrer"
@@ -27,6 +27,7 @@ class Home extends Component {
           <p>
             Previously, I was developing front end architectures at{" "}
             <a
+              className="link"
               href="https://goamplifi.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -38,6 +39,7 @@ class Home extends Component {
           <p>
             My open sourced work can be found on{" "}
             <a
+              className="link"
               href="https://github.com/larry-dalmeida"
               target="_blank"
               rel="noopener noreferrer"
@@ -56,6 +58,7 @@ class Home extends Component {
             <ul className="links">
               <li>
                 <a
+                  className="link"
                   href="http://stage.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -65,6 +68,7 @@ class Home extends Component {
               </li>
               <li>
                 <a
+                  className="link"
                   href="http://yankeecandle.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -79,7 +83,10 @@ class Home extends Component {
         <footer>
           <address>
             The best way to contact me is by{" "}
-            <a href="mailto:hello@larrydalmeida.com">email</a>.
+            <a className="link" href="mailto:hello@larrydalmeida.com">
+              email
+            </a>
+            .
           </address>
         </footer>
       </Fragment>
@@ -87,4 +94,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default injectIntl(Home);

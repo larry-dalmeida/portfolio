@@ -1,0 +1,36 @@
+.languages {
+  font-weight: 400;
+  font-size: 14px;
+  position: fixed;
+  right: 3%;
+  top: 50px;
+}
+
+.languages a {
+  text-decoration: none;
+  display: block;
+  opacity: 0.6;
+}
+
+.languages a:first-of-type {
+  margin-bottom: 10px;
+}
+
+.languages a:hover,
+.languages a:focus {
+  opacity: 1;
+}
+
+@media (min-width: 767px) {
+  .languages {
+    position: fixed;
+    right: 10%;
+    top: 70px;
+  }
+}
+
+.languages .active {
+  text-decoration: underline;
+  font-weight: 700;
+  opacity: 0.8;
+}
