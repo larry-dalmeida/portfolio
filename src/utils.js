@@ -7,7 +7,7 @@ export const getLocaleFromURL = () => {
   if (LOCALES.includes(locale)) {
     return locale;
   }
-  return "en";
+  return LOCALE_EN;
 };
 
 export const getUrlParameter = (url, name) => {
