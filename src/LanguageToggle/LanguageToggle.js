@@ -3,7 +3,7 @@ import { string, func } from "prop-types";
 import classnames from "classnames";
 
 import "./LanguageToggle.css";
-import { LOCALE_EN, LOCALE_DE } from "./locales";
+import { LOCALE_EN, LOCALE_DE } from "../locales";
 
 class LanguageButton extends PureComponent {
   static propTypes = {

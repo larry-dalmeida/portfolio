@@ -3,13 +3,13 @@ import { IntlProvider, addLocaleData } from "react-intl";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import deLocaleData from "react-intl/locale-data/de";
 
-import translations from "./i18n/locales";
-import Home from "./Home";
-import About from "./About";
-import NoMatch from "./NoMatch";
-import LanguageToggle from "./LanguageToggle";
-import { LOCALE_EN } from "./locales";
-import { getUrlParameter, setLocaleParamInURL } from "./utils";
+import translations from "../i18n/locales";
+import Home from "../Home/Home";
+import About from "../About/About";
+import NoMatch from "../NoMatch";
+import LanguageToggle from "../LanguageToggle/LanguageToggle";
+import { LOCALE_EN } from "../locales";
+import { getUrlParameter, setLocaleParamInURL } from "../utils";
 
 addLocaleData(deLocaleData);
 

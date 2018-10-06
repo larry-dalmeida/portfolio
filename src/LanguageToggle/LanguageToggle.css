@@ -13,7 +13,6 @@
 
 @media (min-width: 767px) {
   .languages {
-    position: fixed;
     top: 70px;
     right: 10%;
     width: 56px;
