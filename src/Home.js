@@ -59,11 +59,11 @@ class Home extends Component {
               <li>
                 <a
                   className="link"
-                  href="http://stage.com"
+                  href="https://www.barnesandnoble.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Stage
+                  Barnes &amp; Noble
                 </a>
               </li>
               <li>
@@ -73,7 +73,7 @@ class Home extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  YC
+                  Yankee Candle
                 </a>
               </li>
             </ul>
