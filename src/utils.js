@@ -1,13 +1,8 @@
 import { LOCALE_EN, LOCALE_DE } from "./locales";
 
-const LOCALES = [LOCALE_EN, LOCALE_DE];
-
-export const getLocaleFromURL = () => {
-  const locale = window.location.search.replace("?locale=", "");
-  if (LOCALES.includes(locale)) {
-    return locale;
-  }
-  return LOCALE_EN;
+export const isValidLocale = locale => {
+  const LOCALES = [LOCALE_EN, LOCALE_DE];
+  return LOCALES.includes(locale);
 };
 
 export const getUrlParameter = (url, name) => {
@@ -21,14 +16,19 @@ export const getUrlParameter = (url, name) => {
     : decodeURIComponent(results[1].replace(/\+/g, " "));
 };
 
+export const getLocaleFromURL = url => {
+  const detectedLocale = getUrlParameter(url, "lang");
+  return isValidLocale(detectedLocale) ? detectedLocale : LOCALE_EN;
+};
+
 export const setLocaleParamInURL = locale => {
   // eslint-disable-next-line no-restricted-globals
   const updatedURL = addLocaleToURL(window.location, locale);
   window.history.pushState({ path: updatedURL }, "", updatedURL);
 };
 
-export const addLocaleToURL = (windowLocation, locale) => {
-  const { protocol, host, pathname, hash } = windowLocation;
+export const addLocaleToURL = (location, locale) => {
+  const { protocol, host, pathname, hash } = location;
   const updatedURL = `${protocol}//${host}${pathname}?lang=${locale}${hash}`;
   return updatedURL;
 };
