@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { injectIntl } from "react-intl";
 
 import messages from "../messages";
+import Header from "../Common/Header";
 
 class Home extends Component {
   render() {
@@ -10,6 +11,7 @@ class Home extends Component {
     } = this.props;
     return (
       <Fragment>
+        <Header />
         <main>
           <h1>{formatMessage(messages.title)}</h1>
           <p>

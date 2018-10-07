@@ -7,14 +7,16 @@ import translations from "../i18n/locales";
 import Home from "../Home/Home";
 import About from "../About/About";
 import NoMatch from "../NoMatch";
-import LanguageToggle from "../LanguageToggle/LanguageToggle";
 import { LOCALE_EN } from "../locales";
 import { getUrlParameter, setLocaleParamInURL } from "../utils";
+import LanguageToggle from "../LanguageToggle/LanguageToggle";
 
 addLocaleData(deLocaleData);
 
 class App extends PureComponent {
-  state = { locale: LOCALE_EN };
+  state = {
+    locale: LOCALE_EN
+  };
 
   handleChangeLanguage = locale => {
     this.setState({ locale }, () => {
@@ -34,13 +36,10 @@ class App extends PureComponent {
     const messages = translations[locale];
     return (
       <article className="container">
-        <header>
-          <p className="logo">Larry D'Almeida</p>
-          <LanguageToggle
-            locale={locale}
-            onChangeLanguage={this.handleChangeLanguage}
-          />
-        </header>
+        <LanguageToggle
+          locale={locale}
+          onChangeLanguage={this.handleChangeLanguage}
+        />
         <IntlProvider locale={locale} key={locale} messages={messages}>
           <HashRouter>
             <Switch>
