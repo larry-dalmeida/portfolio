@@ -3,17 +3,19 @@
 ========================================================================== */
 
 :root {
-  --color-bg: #0f0f0f;
-  --color-text: #fff;
-  --font-family-1: 'Cabin', sans-serif;
+  --color-bg: #fff;
+  --color-text: #0f0f0f;
+  --font-family-1: "Cabin", sans-serif;
   --spacing-1: 50px;
+  --color-button-border: #ccc;
+  --color-button: #999;
 }
 
 /* =======================================================================
    Elements
 ========================================================================== */
 
-/* Minireset */
+/* Minireset/Normalize */
 
 html,
 body,
@@ -57,6 +59,11 @@ img {
   max-width: 100%;
 }
 
+button {
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+
 /* Generic */
 
 body {
@@ -68,8 +75,38 @@ body {
 }
 
 a {
-  --color-text-hovered: #000;
+  --color-text-hovered: var(--color-bg);
   color: var(--color-text);
+}
+
+button {
+  border: 1px solid var(--color-button-border);
+  color: var(--color-button);
+  border-radius: 3px;
+  padding: 0.15rem 0.3rem;
+  margin: 0 0.15rem;
+}
+
+button:hover,
+button:focus {
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+button:focus {
+  outline: 1px solid var(--color-bg);
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+/* =======================================================================
+   Objects
+========================================================================== */
+
+.link {
   font-weight: 700;
   display: inline-block;
   margin: 0 3px;
@@ -79,15 +116,15 @@ a {
   transition: all 0.4s cubic-bezier(0.15, 0.9, 0.34, 0.95);
 }
 
-a::after,
-a::before {
+.link::after,
+.link::before {
   display: block;
   background-color: var(--color-text);
   position: absolute;
-  content: '';
+  content: "";
 }
 
-a::before {
+.link::before {
   top: 0;
   left: -5%;
   height: 100%;
@@ -98,7 +135,7 @@ a::before {
   z-index: -1;
 }
 
-a::after {
+.link::after {
   bottom: 2px;
   left: 0;
   height: 1px;
@@ -106,20 +143,26 @@ a::after {
   transition: all 0.4s cubic-bezier(0.15, 0.9, 0.34, 0.95);
 }
 
-a:hover,
-a:focus {
+.link:hover,
+.link:focus {
   color: var(--color-text-hovered);
   transition: all 0.4s cubic-bezier(0.15, 0.9, 0.34, 0.95) 0.2s;
 }
 
-a:hover::before,
-a:focus::before {
+.link:hover::before,
+.link:focus::before {
   transform: scaleX(1);
 }
 
-/* =======================================================================
-   Objects
-========================================================================== */
+.sr-only {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 
 .container {
   padding: 50px 0;

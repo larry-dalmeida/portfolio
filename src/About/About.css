@@ -1,0 +1,82 @@
+/* =======================================================================
+   Polaroid
+========================================================================== */
+
+.polaroid {
+  width: 250px;
+  margin: 0 auto 30px auto;
+}
+
+.polaroid-wrapper {
+  --color-bg: #fff;
+  --color-text: #333;
+  background: var(--color-bg);
+  width: auto;
+  padding: 10px 10px 15px;
+  text-align: center;
+  font-family: "Marker Felt", sans-serif;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 18px;
+
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+
+  /* Add drop shadows and smooth out the transition (Safari only) */
+  -webkit-transition: -webkit-transform 0.15s linear;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.polaroid-wrapper:after {
+  content: attr(title);
+}
+
+.page:nth-child(even) .polaroid-wrapper {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+}
+
+.polaroid:hover .polaroid-wrapper {
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  position: relative;
+  z-index: 5;
+
+  /* On hover, darken the shadows a bit */
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* =======================================================================
+   Page
+========================================================================== */
+.page {
+  text-align: center;
+}
+
+.page:first-child {
+  margin-top: 75px;
+}
+
+.page:not(:first-child) {
+  margin-top: 150px;
+}
+
+.page-headline {
+  font-size: 55px;
+  line-height: 70px;
+}
+
+@media (min-width: 640px) {
+  .polaroid {
+    margin: 0 30px 0 0;
+  }
+  .page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-top: 300px;
+  }
+}

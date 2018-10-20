@@ -1,0 +1,14 @@
+{
+  "app.linkAmplifi": "<a class=\"link\" href=\"https://goamplifi.com\" target=\"_blank\" rel=\"noopener noreferrer\">Amplifi</a>",
+  "app.linkEmail": "<a class=\"link\" href=\"mailto:hello@larrydalmeida.com\" target=\"_blank\" rel=\"noopener noreferrer\">e-mail</a>",
+  "app.linkGitHub": "<a class=\"link\" href=\"https://github.com/larry-dalmeida\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>",
+  "app.linkZalando": "<a class=\"link\" href=\"http://zalando.de\" target=\"_blank\" rel=\"noopener noreferrer\">Zalando</a>",
+  "app.portfolio.contact": "The best way to contact me is by {linkEmail}.",
+  "app.portfolio.headline": "I am a software engineer specializing in building maintainable and high performance e-commerce applications.",
+  "app.portfolio.interests": "Besides technology, I thoroughly enjoy studying Anthropology.",
+  "app.portfolio.living": "After living in Bangalore and Dubai for many years, I now live in Berlin.",
+  "app.portfolio.openSource": "My open-source work can be found on {linkGitHub}.",
+  "app.portfolio.projects": "Some of the things I have built with great teams are",
+  "app.portfolio.workCurrent": "These days, I disrupt the online retail space with {linkZalando}.",
+  "app.portfolio.workPrevious": "Previously, I was developing front end architectures at {linkAmplifi}."
+}

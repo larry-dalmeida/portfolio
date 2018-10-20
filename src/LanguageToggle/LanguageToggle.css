@@ -1,0 +1,25 @@
+.languages {
+  --color-active: #222;
+  font-weight: 400;
+  font-size: 14px;
+  position: absolute;
+  right: 3%;
+  top: 20px;
+}
+
+.languages button {
+  background: var(--color-bg);
+}
+
+@media (min-width: 767px) {
+  .languages {
+    top: 70px;
+    right: 10%;
+  }
+}
+
+.languages .active {
+  color: var(--color-active);
+  border-color: var(--color-active);
+  transform: scale(0.99);
+}
