@@ -8,7 +8,7 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import NoMatch from "../NoMatch";
 import { LOCALE_EN } from "../locales";
-import { getUrlParameter, setLocaleParamInURL } from "../utils";
+import { getUrlParameter, setLocaleParamInURL, detectLocale } from "../utils";
 import LanguageToggle from "../LanguageToggle/LanguageToggle";
 
 addLocaleData(deLocaleData);
@@ -25,15 +25,19 @@ class App extends PureComponent {
   };
 
   componentDidMount() {
-    const locale = getUrlParameter(window.location.href, "lang");
-    if (locale.length) {
-      this.handleChangeLanguage(locale);
+    // if the url has a locale query string, use that
+    let locale = getUrlParameter(window.location.href, "lang");
+    if (locale.length === 0) {
+      // detect locale
+      locale = detectLocale(window.navigator);
     }
+    this.handleChangeLanguage(locale);
   }
 
   render() {
     const { locale } = this.state;
     const messages = translations[locale];
+    // TODO: Remove the feature flag (or feature!) for About when finalized
     return (
       <article className="container">
         <LanguageToggle
@@ -44,7 +48,9 @@ class App extends PureComponent {
           <HashRouter>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/about" component={About} />
+              {process.env.NODE_ENV !== "production" && (
+                <Route path="/about" component={About} />
+              )}
               <Route component={NoMatch} />
             </Switch>
           </HashRouter>

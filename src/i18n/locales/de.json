@@ -1,5 +1,14 @@
 {
-  "app.portfolio.content1": "To get started, edit",
-  "app.portfolio.content2": "and save to reload.",
-  "app.portfolio.headline": "Ja! Das is richtig!"
+  "app.linkAmplifi": "<a class=\"link\" href=\"https://goamplifi.com\" target=\"_blank\" rel=\"noopener noreferrer\">Amplifi</a>",
+  "app.linkEmail": "<a class=\"link\" href=\"mailto:hello@larrydalmeida.com\" target=\"_blank\" rel=\"noopener noreferrer\">E-Mail</a>",
+  "app.linkGitHub": "<a class=\"link\" href=\"https://github.com/larry-dalmeida\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>",
+  "app.linkZalando": "<a class=\"link\" href=\"http://zalando.de\" target=\"_blank\" rel=\"noopener noreferrer\">Zalando</a>",
+  "app.portfolio.contact": "Der beste Weg, mich zu kontaktieren, ist per {linkEmail}.",
+  "app.portfolio.headline": "Ich bin ein Softwareentwickler. Meine Spezialität ist der Aufbau leistungsstarker Web-Anwendungen für den Online-Handel.",
+  "app.portfolio.interests": "Neben der Technologie studiere ich gerne Anthropologie.",
+  "app.portfolio.living": "Nachdem ich viele Jahre in Bangalore und Dubai gelebt habe, lebe ich jetzt in Berlin.",
+  "app.portfolio.openSource": "Meine Open-Source-Arbeit kann auf {linkGitHub} gesehen werden.",
+  "app.portfolio.projects": "Einige der Dinge, die ich mit tollen Teams gebaut habe, sind",
+  "app.portfolio.workCurrent": "Ich arbeite mit {linkZalando}.",
+  "app.portfolio.workPrevious": "Zuvor habe ich Frontend-Architekturen bei {linkAmplifi} entworfen."
 }

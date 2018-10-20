@@ -1,62 +1,51 @@
 import React, { Component, Fragment } from "react";
-import { injectIntl } from "react-intl";
+import { injectIntl, FormattedMessage, FormattedHTMLMessage } from "react-intl";
 
-import messages from "../messages";
 import Header from "../Common/Header";
 
 class Home extends Component {
   render() {
-    const {
-      intl: { formatMessage }
-    } = this.props;
     return (
       <Fragment>
         <Header />
         <main>
-          <h1>{formatMessage(messages.title)}</h1>
+          <h1>
+            <FormattedMessage id="app.portfolio.headline" />
+          </h1>
           <p>
-            These days, I disrupt the online retail space with
-            <a
-              className="link"
-              href="http://zalando.de"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Zalando
-            </a>
-            .
+            <FormattedMessage
+              id="app.portfolio.workCurrent"
+              values={{
+                linkZalando: <FormattedHTMLMessage id="app.linkZalando" />
+              }}
+            />
           </p>
           <p>
-            Previously, I was developing front end architectures at{" "}
-            <a
-              className="link"
-              href="https://goamplifi.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Amplifi
-            </a>
-            .
+            <FormattedMessage
+              id="app.portfolio.workPrevious"
+              values={{
+                linkAmplifi: <FormattedHTMLMessage id="app.linkAmplifi" />
+              }}
+            />
           </p>
           <p>
-            My open sourced work can be found on{" "}
-            <a
-              className="link"
-              href="https://github.com/larry-dalmeida"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            .
+            <FormattedMessage
+              id="app.portfolio.openSource"
+              values={{
+                linkGitHub: <FormattedHTMLMessage id="app.linkGitHub" />
+              }}
+            />
           </p>
           <p>
-            After living for many years in Bangalore and Dubai, I now live in
-            Berlin.
+            <FormattedMessage id="app.portfolio.living" />
           </p>
-          <p>Besides technology, I thoroughly enjoy studying Anthropology.</p>
+          <p>
+            <FormattedMessage id="app.portfolio.interests" />
+          </p>
           <section className="links-group">
-            <h2>Some of the things I have built with great teams are</h2>
+            <h2>
+              <FormattedMessage id="app.portfolio.projects" />
+            </h2>
             <ul className="links">
               <li>
                 <a
@@ -84,11 +73,12 @@ class Home extends Component {
 
         <footer>
           <address>
-            The best way to contact me is by{" "}
-            <a className="link" href="mailto:hello@larrydalmeida.com">
-              email
-            </a>
-            .
+            <FormattedMessage
+              id="app.portfolio.contact"
+              values={{
+                linkEmail: <FormattedHTMLMessage id="app.linkEmail" />
+              }}
+            />
           </address>
         </footer>
       </Fragment>

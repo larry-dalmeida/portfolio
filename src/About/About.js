@@ -14,7 +14,7 @@ const About = () => (
       <div>
         <header>
           <h1 className="page-headline">
-            Hello Berlin! <br /> I'm Larry.
+            Hello <strong>Berlin</strong>! <br /> I'm Larry.
           </h1>
         </header>
       </div>

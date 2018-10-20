@@ -15,16 +15,6 @@
   .languages {
     top: 70px;
     right: 10%;
-    width: 56px;
-  }
-
-  .languages button {
-    display: block;
-    width: 100%;
-  }
-
-  .languages button:first-of-type {
-    margin-bottom: 10px;
   }
 }
 
