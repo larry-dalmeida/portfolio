@@ -3,8 +3,8 @@
 ========================================================================== */
 
 :root {
-  --color-bg: #fff;
-  --color-text: #0f0f0f;
+  --color-bg: #0f0f0f;
+  --color-text: #fff;
   --font-family-1: "Cabin", sans-serif;
   --spacing-1: 50px;
   --color-button-border: #ccc;
@@ -102,6 +102,20 @@ button:active {
   transform: scale(0.99);
 }
 
+h1,
+h2,
+p {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  h1,
+  h2,
+  p {
+    margin-bottom: 10px;
+  }
+}
+
 /* =======================================================================
    Objects
 ========================================================================== */
@@ -170,7 +184,7 @@ button:active {
   margin: 0 auto;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .container {
     padding: 70px 0;
     max-width: 80%;
@@ -183,6 +197,10 @@ button:active {
 
 .links-group {
   margin: var(--spacing-1) 0;
+}
+
+.links-group li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .logo {
