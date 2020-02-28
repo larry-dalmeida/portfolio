@@ -30,8 +30,8 @@
     "filepath": "src/messages.js"
   },
   {
-    "id": "app.portfolio.openSource",
-    "defaultMessage": "My open-source work can be found on {linkGitHub}.",
+    "id": "app.portfolio.github",
+    "defaultMessage": "You can see my code on {linkGitHub}.",
     "filepath": "src/messages.js"
   },
   {

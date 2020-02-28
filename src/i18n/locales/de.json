@@ -7,7 +7,7 @@
   "app.portfolio.headline": "Ich bin ein Softwareentwickler. Meine Spezialität ist der Aufbau leistungsstarker Web-Anwendungen für den Online-Handel.",
   "app.portfolio.interests": "Neben der Technologie studiere ich gerne Anthropologie.",
   "app.portfolio.living": "Nachdem ich viele Jahre in Bangalore und Dubai gelebt habe, lebe ich jetzt in Berlin.",
-  "app.portfolio.openSource": "Meine Open-Source-Arbeit kann auf {linkGitHub} gesehen werden.",
+  "app.portfolio.github": "Sie können meinen Code auf {linkGitHub} sehen",
   "app.portfolio.projects": "Einige der Dinge, die ich mit tollen Teams gebaut habe, sind",
   "app.portfolio.workCurrent": "Ich arbeite mit {linkZalando}.",
   "app.portfolio.workPrevious": "Zuvor habe ich Frontend-Architekturen bei {linkAmplifi} entworfen."
