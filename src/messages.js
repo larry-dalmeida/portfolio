@@ -30,8 +30,8 @@ const messages = defineMessages({
     id: "app.portfolio.projects",
     defaultMessage: "Some of the things I have built with great teams are"
   },
-  openSource: {
-    id: "app.portfolio.openSource",
+  github: {
+    id: "app.portfolio.github",
     defaultMessage: "My open-source work can be found on {linkGitHub}."
   },
   contact: {

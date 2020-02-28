@@ -30,7 +30,7 @@ class Home extends Component {
           </p>
           <p>
             <FormattedMessage
-              id="app.portfolio.openSource"
+              id="app.portfolio.github"
               values={{
                 linkGitHub: <FormattedHTMLMessage id="app.linkGitHub" />
               }}
