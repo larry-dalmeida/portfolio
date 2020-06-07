@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "babel-plugin-react-intl": "^3.0.1",
-    "react-intl-cra": "^0.3.3",
+    "react-intl-cra": "^0.3.4",
     "react-intl-translations-manager": "^5.0.3"
   }
 }
